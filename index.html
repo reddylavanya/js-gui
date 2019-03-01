@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Travelers Estimator</title>
+  <title>Volume Estimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -19,12 +19,15 @@
     <h3>Right-click / Inspect, then select console</h3>
 
     
-    <p>Enter No of people per car:
-      <input id="peoplePerCar" type="number" value="5">
+    <p>Enter length:
+      <input id="length" type="number" value="5">
     </p>
 
-    <p>Enter number of cars:
-      <input id="cars" type="number" value="4">
+    <p>Enter width:
+      <input id="width" type="number" value="4">
+    </p>
+    <p>Enter height:
+      <input id="height" type="number" value="5">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -38,8 +41,8 @@
 
     console.log('Declare testable functions.....................')
 
-    function mul(x, y) {
-      return result = x * y;
+    function mul(x, y,z) {
+      return result = x * y*z;
     }
     console.log('Defined multiplication=' + mul)
 
@@ -47,11 +50,13 @@
 
     document.getElementById('clicker').addEventListener('click', function () {
      
-      const i = parseInt(document.getElementById('peoplePerCar').value)
+      const i = parseInt(document.getElementById('length').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('cars').value)
+      const j = parseInt(document.getElementById('width').value)
       console.log('j=' + j)
-      const ans = ', your multiplied value is ' + mul(i, j) + '.'
+      const k = parseInt(document.getElementById('height').value)
+      console.log('k=' + k)
+      const ans = ', your multiplied value is ' + mul(i, j,k) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
