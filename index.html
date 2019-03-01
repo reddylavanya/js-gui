@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Grocery Estimator</title>
+  <title>Travelers Estimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -20,11 +20,11 @@
 
     
     <p>Enter No of items per bag:
-      <input id="firstNumber" type="number" value="2">
+      <input id="peoplePerCar" type="number" value="2">
     </p>
 
     <p>Enter number of bags:
-      <input id="secondNumber" type="number" value="3">
+      <input id="cars" type="number" value="3">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -47,9 +47,9 @@
 
     document.getElementById('clicker').addEventListener('click', function () {
      
-      const i = parseInt(document.getElementById('firstNumber').value)
+      const i = parseInt(document.getElementById('peoplePerCar').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
+      const j = parseInt(document.getElementById('cars').value)
       console.log('j=' + j)
       const ans = ', your multiplied value is ' + mul(i, j) + '.'
       document.getElementById('result').innerHTML = ans
